@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- group: varGrpforYaml
+
 steps:
 - task: Maven@3
   inputs:
@@ -20,3 +23,4 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- bash: echo $(myVar1)
