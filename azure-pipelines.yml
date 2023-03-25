@@ -24,3 +24,4 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 - bash: echo $(myVar1)
+- bash: echo "Dipak Patil"
